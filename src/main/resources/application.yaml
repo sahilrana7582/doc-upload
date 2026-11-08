@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: doc-upload
+    
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 500MB
+        max-request-size: 600MB
+        file-size-threshold: 2MB
+        location: ${java.io.tmpdir}
+
+server:
+  port: 8080
+
+app:
+    aws:
+        s3:
+            bucket: ${AWS_S3_BUCKET}
+            region: ${AWS_REGION:ap-south-1}
