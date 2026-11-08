@@ -9,6 +9,8 @@ spring:
       max-request-size: 600MB
       file-size-threshold: 2MB
       location: ${java.io.tmpdir}
+  config:
+    import: optional:file:.env[.properties]
 
 server:
   port: 8080
